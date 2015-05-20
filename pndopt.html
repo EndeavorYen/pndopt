@@ -89,7 +89,7 @@
     z-index: 10000;
 }
 #solve {
-    width: 180px;
+	width: 180px;
     height: 40px;
     font-size: 1.25em;
     font-weight: bold;
@@ -101,11 +101,12 @@
 }
 #solutions {
     position: absolute;
-    left: 800px;
-    top: 20px;
-    right: 20px;
+    left: 20px;
+    top: 600px;
+    /* right: 20px; */
     bottom: 20px;
-    overflow: scroll;
+    /*overflow: scroll;*/
+	width: 800px;
 }
 #solutions li { padding: 4px; cursor: pointer; }
 #solutions li:hover { background: #cfc; }
@@ -204,43 +205,84 @@
     <table>
         <tr>
             <th></th>
-            <th>Normal (3+)</th>
-            <th>Mass (5+)</th>
+			<th>模式</th>
+            <th>單體</th>
+            <th>雙體</th>
+			<th>橫排</th>
+			<th>全體</th>
         </tr>
         <tr>
             <td class="e0" title="Fire"></td>
-            <td><input id="e0-normal" value="1"/></td>
-            <td><input id="e0-mass" value="3"/></td>
+			<td><select id="e0-pattern" /><option value="6,2,1,1" selected="selected">----- 單體 -----</option>
+			<option value="3,12,1,1">----- 雙體 -----</option>
+			<option value="3,6,12,3">----- 橫排 -----</option>
+			<option value="1,1,1,2">----- 全體 -----</option></select></td>
+            <td><input id="e0-normal" value="6"/></td>
+			<td><input id="e0-two_way" value="2"/></td>
+			<td><input id="e0-line" value="1"/></td>
+            <td><input id="e0-mass" value="1"/></td>
         </tr>
         <tr>
             <td class="e1" title="Water"></td>
-            <td><input id="e1-normal" value="1"/></td>
-            <td><input id="e1-mass" value="3"/></td>
+            <td><select id="e1-pattern" /><option value="6,2,1,1" selected="selected">----- 單體 -----</option>
+			<option value="3,12,1,1">----- 雙體 -----</option>
+			<option value="3,6,12,3">----- 橫排 -----</option>
+			<option value="1,1,1,2">----- 全體 -----</option></select></td>
+            <td><input id="e1-normal" value="6"/></td>
+			<td><input id="e1-two_way" value="2"/></td>
+			<td><input id="e1-line" value="1"/></td>
+            <td><input id="e1-mass" value="1"/></td>
         </tr>
         <tr>
             <td class="e2" title="Wood"></td>
-            <td><input id="e2-normal" value="1"/></td>
-            <td><input id="e2-mass" value="3"/></td>
+            <td><select id="e2-pattern" /><option value="6,2,1,1" selected="selected">----- 單體 -----</option>
+			<option value="3,12,1,1">----- 雙體 -----</option>
+			<option value="3,6,12,3">----- 橫排 -----</option>
+			<option value="1,1,1,2">----- 全體 -----</option></select></td>
+            <td><input id="e2-normal" value="6"/></td>
+			<td><input id="e2-two_way" value="2"/></td>
+			<td><input id="e2-line" value="1"/></td>
+            <td><input id="e2-mass" value="1"/></td>
         </tr>
         <tr>
             <td class="e3" title="Light"></td>
-            <td><input id="e3-normal" value="1"/></td>
-            <td><input id="e3-mass" value="3"/></td>
+            <td><select id="e3-pattern" /><option value="6,2,1,1" selected="selected">----- 單體 -----</option>
+			<option value="3,12,1,1">----- 雙體 -----</option>
+			<option value="3,6,12,3">----- 橫排 -----</option>
+			<option value="1,1,1,2">----- 全體 -----</option></select></td>
+            <td><input id="e3-normal" value="6"/></td>
+			<td><input id="e3-two_way" value="2"/></td>
+			<td><input id="e3-line" value="1"/></td>
+            <td><input id="e3-mass" value="1"/></td>
         </tr>
         <tr>
             <td class="e4" title="Dark"></td>
-            <td><input id="e4-normal" value="1"/></td>
-            <td><input id="e4-mass" value="3"/></td>
+            <td><select id="e4-pattern" /><option value="6,2,1,1" selected="selected">----- 單體 -----</option>
+			<option value="3,12,1,1">----- 雙體 -----</option>
+			<option value="3,6,12,3">----- 橫排 -----</option>
+			<option value="1,1,1,2">----- 全體 -----</option></select></td>
+            <td><input id="e4-normal" value="6"/></td>
+			<td><input id="e4-two_way" value="2"/></td>
+			<td><input id="e4-line" value="1"/></td>
+            <td><input id="e4-mass" value="1"/></td>
         </tr>
         <tr>
             <td class="e5" title="Heal"></td>
-            <td><input id="e5-normal" value="0.3"/></td>
-            <td><input id="e5-mass" value="0.3"/></td>
+            <td><select id="e5-pattern" /><option value="6,2,1,1" selected="selected">----- 普通 -----</option>
+			<option value="3,6,12,3">----- 橫排 -----</option></select></td>
+            <td><input id="e5-normal" value="6"/></td>
+			<td><input id="e5-two_way" value="2"/></td>
+			<td><input id="e5-line" value="1"/></td>
+            <td><input id="e5-mass" value="1"/></td>
         </tr>
         <tr>
             <td class="e6" title="Junk"></td>
-            <td><input id="e6-normal" value="0.1"/></td>
-            <td><input id="e6-mass" value="0.1"/></td>
+            <td><select id="e6-pattern" /><option value="6,2,1,1" selected="selected">----- 普通 -----</option>
+			<option value="1,1,1,2">----- 全消 -----</option></select></td>
+            <td><input id="e6-normal" value="6"/></td>
+			<td><input id="e6-two_way" value="2"/></td>
+			<td><input id="e6-line" value="1"/></td>
+            <td><input id="e6-mass" value="1"/></td>
         </tr>
     </table>
     <p>Profile: <select id="profile-selector">
@@ -248,24 +290,28 @@
         <option value="1,1,1,1,1,1,1,1,1,1,0.3,0.3,0.1,0.1">5-color team, single target</option>
         <option value="0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,1,1,0.1,0.1">Recovery</option>
         <option value="0.1,0.3,0.1,0.3,0.1,0.3,0.1,0.3,0.1,0.3,1,1,0.1,0.1">Recovery, multiple target</option>
-        <option value="1,3,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.3,0.3,0.1,0.1">Fire team, multiple target</option>
-        <option value="1,1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.3,0.3,0.1,0.1">Fire team, single target</option>
-        <option value="0.1,0.1,1,3,0.1,0.1,0.1,0.1,0.1,0.1,0.3,0.3,0.1,0.1">Water team, multiple target</option>
-        <option value="0.1,0.1,1,1,0.1,0.1,0.1,0.1,0.1,0.1,0.3,0.3,0.1,0.1">Water team, single target</option>
-        <option value="0.1,0.1,0.1,0.1,1,3,0.1,0.1,0.1,0.1,0.3,0.3,0.1,0.1">Wood team, multiple target</option>
-        <option value="0.1,0.1,0.1,0.1,1,1,0.1,0.1,0.1,0.1,0.3,0.3,0.1,0.1">Wood team, single target</option>
-        <option value="0.1,0.1,0.1,0.1,0.1,0.1,1,3,0.1,0.1,0.3,0.3,0.1,0.1">Light team, multiple target</option>
-        <option value="0.1,0.1,0.1,0.1,0.1,0.1,1,1,0.1,0.1,0.3,0.3,0.1,0.1">Light team, single target</option>
-        <option value="0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,1,3,0.3,0.3,0.1,0.1">Dark team, multiple target</option>
-        <option value="0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,1,1,0.3,0.3,0.1,0.1">Dark team, single target</option>
     </select></p>
+	<p>COMBO_BONUS     : <input id="combo_bonus" value="0.5"/></p>
+	<p>MULTI_ORB_BONUS : <input id="multi_orb_bonus" value="0.1"/></p>
+	<p>計算複雜度     : <select id="complex"><option value="2" selected="selected">簡單</option>	
+						<option value="4">普通</option>
+						<option value="8">稍複雜</option>
+						<option value="20">很複雜</option>
+						<option value="200">超級複雜</option>
+						<option value="1000">終極</option>
+						</select></p>
 </div>
 
 <div id="controls">
     <input type="checkbox" id="allow-8"/>
         <label for="allow-8">Allow 8-direction movement</label><br />
     <label for="max-length">Max path length</label>
-        <input id="max-length" value="16" size="3"/><br />
+	<select id="max-length"><option value="25">25</option>
+			<option value="30">30</option>
+			<option selected="selected" value="40">40</option>
+			<option value="45">45</option>
+			<option value="50">50</option></select><br />
+        <!-- <input id="max-length" value="30" size="3"/><br /> -->
     <input type="button" value="Solve" id="solve"/>
 </div>
 
@@ -327,11 +373,13 @@
     </div>
 </div>
 
+<!--
 <div class="github-fork-ribbon-wrapper left-bottom">
     <div class="github-fork-ribbon">
         <a href="https://github.com/kennytm/pndopt">Fork me on GitHub</a>
     </div>
 </div>
+-->
 
 <script src="ext/jquery-1.9.1.min.js"></script>
 <script>
@@ -342,16 +390,21 @@ var ORB_X_SEP = 64;
 var ORB_Y_SEP = 64;
 var ORB_WIDTH = 60;
 var ORB_HEIGHT = 60;
-var MULTI_ORB_BONUS = 0.25;
-var COMBO_BONUS = 0.25;
-var MAX_SOLUTIONS_COUNT = ROWS * COLS * 8 * 2;
+//var MULTI_ORB_BONUS = 1;
+//var COMBO_BONUS = 0.25;
+var MULTI_ORB_BONUS = 0;
+var COMBO_BONUS = 0;
+//var MAX_SOLUTIONS_COUNT = ROWS * COLS * 8 * 2;
+var MAX_SOLUTIONS_COUNT = ROWS * COLS * 8 * 4;
 
 function make_rc(row, col) {
     return {row: row, col: col};
 }
-
-function make_match(type, count) {
-    return {type: type, count: count};
+//function make_match(type, count, pattern) {
+function make_match(type, count, pattern) {
+    //type 為珠子的顏色, count 為數量, pattern 為種類 (U、橫排...etc) 
+	return {type: type, count: count, pattern: pattern};
+	//return {type: type, count: count};
 }
 
 function to_xy(rc) {
@@ -423,17 +476,22 @@ function advance_type(type, dt) {
     }
 }
 
+/* 取得目前權重的設定 */
 function get_weights() {
     var weights = new Array(TYPES);
-    for (var i = 0; i < TYPES; ++ i) {
+	/* 各種顏色的權重 */
+	for (var i = 0; i < TYPES; ++ i) {
         weights[i] = {
-            normal: +$('#e' + i + '-normal').val(),
-            mass: +$('#e' + i + '-mass').val(),
+            normal:  +$('#e' + i + '-normal').val(),
+			two_way: +$('#e' + i + '-two_way').val(),
+			line:    +$('#e' + i + '-line').val(),
+            mass:    +$('#e' + i + '-mass').val(),
         };
     }
     return weights;
 }
 
+/* 分析目前盤面 match 的狀況 */
 function find_matches(board) {
     var match_board = create_empty_board();
 
@@ -479,17 +537,32 @@ function find_matches(board) {
             if (typeof(cur_orb) == 'undefined') { continue; }
             var stack = [make_rc(i, j)];
             var count = 0;
-            while (stack.length) {
+			var tag = 0;
+             
+			while (stack.length) {
                 var n = stack.pop();
                 if (scratch_board[n.row][n.col] != cur_orb) { continue; }
                 ++ count;
                 scratch_board[n.row][n.col] = undefined;
-                if (n.row > 0) { stack.push(make_rc(n.row-1, n.col)); }
+				// 對橫排作特殊的紀錄
+				if (n.col == 0) { tag = tag | 2; }   // 判斷是否為橫排 左邊起點
+				else if(n.col == COLS - 1) { tag = tag | 1; }  // 判斷是否為橫排 右邊起點
+                // 將要搜尋的位置 push 到 stack 中
+				if (n.row > 0) { stack.push(make_rc(n.row-1, n.col)); }
                 if (n.row < ROWS-1) { stack.push(make_rc(n.row+1, n.col)); }
                 if (n.col > 0) { stack.push(make_rc(n.row, n.col-1)); }
                 if (n.col < COLS-1) { stack.push(make_rc(n.row, n.col+1)); }
             }
-            matches.push(make_match(cur_orb, count));
+			
+			// 判斷種類為何
+			var pattern = "undefined"
+			if (count == 4) { pattern = "two_way"; }         // 雙體
+			else if ((count > 5) && (tag == 3)) { pattern = "line"; }    // 橫排
+			else if (count >= 5) { pattern = "mass"; }       // 全體
+			else { pattern = "normal"; }                   // 單體
+			
+            matches.push(make_match(cur_orb, count, pattern));
+			//matches.push(make_match(cur_orb, count));
         }
     }
 
@@ -502,16 +575,38 @@ function equals_matches(a, b) {
     }
     return a.every(function(am, i) {
         var bm = b[i];
-        return am.type == bm.type && am.count == bm.count;
+        return am.type == bm.type && am.count == bm.count && am.pattern == bm.pattern;
     });
 }
 
+/* 計算盤面的權重 original 
 function compute_weight(matches, weights) {
     var total_weight = 0;
     matches.forEach(function(m) {
         var base_weight = weights[m.type][m.count >= 5 ? 'mass' : 'normal'];
         var multi_orb_bonus = (m.count - 3) * MULTI_ORB_BONUS + 1;
         total_weight += multi_orb_bonus * base_weight;
+    });
+    var combo_bonus = (matches.length - 1) * COMBO_BONUS + 1;
+    return total_weight * combo_bonus;
+} */
+
+/* 權重計算改良版 */
+function compute_weight(matches, weights) {
+    var total_weight = 0;
+    matches.forEach(function(m) {
+        var base_weight = weights[m.type][m.pattern];
+		var multi_two_way = 1.5;      // multiple two_way
+		
+		/* 消除4珠以上加權 */
+        var multi_orb_bonus = (m.count - 3) * MULTI_ORB_BONUS + 1;
+		/* 強化6珠橫排權重 */
+		if ((m.pattern == 'line') && (m.count == 6)) { base_weight *= 4; multi_orb_bonus += 0.05; }
+		/* 強化5珠全體權重，只要一組 */
+		//if ((m.pattern == 'mass') && (m.count == 5)) { base_weight *= 4; weights[m.type]['mass'] = 2; }
+		/* 強化多重雙體權重 */		
+        //if( m.pattern == 'two_way' ) { base_weight *= multi_two_way ; multi_two_way *= 4; }  
+		total_weight += multi_orb_bonus * base_weight;
     });
     var combo_bonus = (matches.length - 1) * COMBO_BONUS + 1;
     return total_weight * combo_bonus;
@@ -886,6 +981,7 @@ $(document).ready(function() {
 
     $('#hand, #import-popup, #change-popup').hide();
 
+	// 選擇設定檔後更改數值
     $('#profile-selector').change(function() {
         var values = this.value.split(/,/);
         for (var i = 0; i < TYPES; ++ i) {
@@ -893,10 +989,80 @@ $(document).ready(function() {
             $('#e' + i + '-mass').val(values[2*i+1]);
         }
     });
-
+	
+	// Fire pattern
+	$('#e0-pattern').change(function() {
+		var values = this.value.split(/,/);
+		$('#e0-normal').val(values[0]);
+		$('#e0-two_way').val(values[1]);
+		$('#e0-line').val(values[2]);
+		$('#e0-mass').val(values[3]);
+	}); 
+	
+	// Water pattern
+	$('#e1-pattern').change(function() {
+		var values = this.value.split(/,/);
+		$('#e1-normal').val(values[0]);
+		$('#e1-two_way').val(values[1]);
+		$('#e1-line').val(values[2]);
+		$('#e1-mass').val(values[3]);
+	}); 
+	
+	// Wood pattern
+	$('#e2-pattern').change(function() {
+		var values = this.value.split(/,/);
+		$('#e2-normal').val(values[0]);
+		$('#e2-two_way').val(values[1]);
+		$('#e2-line').val(values[2]);
+		$('#e2-mass').val(values[3]);
+	}); 
+	
+	// Light pattern
+	$('#e3-pattern').change(function() {
+		var values = this.value.split(/,/);
+		$('#e3-normal').val(values[0]);
+		$('#e3-two_way').val(values[1]);
+		$('#e3-line').val(values[2]);
+		$('#e3-mass').val(values[3]);
+	}); 
+	
+	// Dark pattern
+	$('#e4-pattern').change(function() {
+		var values = this.value.split(/,/);
+		$('#e4-normal').val(values[0]);
+		$('#e4-two_way').val(values[1]);
+		$('#e4-line').val(values[2]);
+		$('#e4-mass').val(values[3]);
+	});
+	
+	// Heal pattern
+	$('#e5-pattern').change(function() {
+		var values = this.value.split(/,/);
+		$('#e5-normal').val(values[0]);
+		$('#e5-two_way').val(values[1]);
+		$('#e5-line').val(values[2]);
+		$('#e5-mass').val(values[3]);
+	});
+	
+	// Junk pattern
+	$('#e6-pattern').change(function() {
+		var values = this.value.split(/,/);
+		$('#e6-normal').val(values[0]);
+		$('#e6-two_way').val(values[1]);
+		$('#e6-line').val(values[2]);
+		$('#e6-mass').val(values[3]);
+	}); 
+	
+	// 按下 solve button
     $('#solve').click(function() {
         var solver_button = this;
         var board = get_board();
+		
+		// 測試用參數
+		MULTI_ORB_BONUS = $('#multi_orb_bonus').val();
+		COMBO_BONUS = $('#combo_bonus').val();
+		MAX_SOLUTIONS_COUNT = ROWS * COLS * 8 * $('#complex').val();         // 計算複雜度
+		
         global_board = board;
         solver_button.disabled = true;
         solve_board(board, function(p, max_p) {
